@@ -6,6 +6,9 @@ import {
   ScrollView
 } from 'react-native';
 
+import "intl";
+import "intl/locale-data/jsonp/pt-BR";
+
 import {
   useDispatch
 } from 'react-redux';
@@ -22,14 +25,14 @@ import { products } from '../../constants';
 
 import {
   IProduct
-} from '../../types/index'
+} from '../../types/index';
+
 
 const Shop = () => {
 
   const dispatch = useDispatch();
 
   const addCartItemShop = (item: IProduct) => {
-    console.log(item);
     dispatch(addNewItem(item));
   }
 
